@@ -123,6 +123,15 @@ Get your WHOOP credentials:
 3. Add your MCP server URL
 4. Test the connection
 
+### Testing the Connection
+
+After connecting to Poke, test with:
+```
+"Use the test_connection tool"
+```
+
+You should see: ✅ MCP Server is working! Connection successful.
+
 ### Available Tools
 
 #### 1. Overview Data
@@ -174,6 +183,31 @@ Returns:
 - Age comparison vs chronological
 - Pace of aging
 - Weekly trends
+
+### Example Conversation
+
+```
+User: What's my recovery score today?
+
+Poke: [Calls whoop_get_recovery tool]
+
+Response: Your recovery is 72% (Green - Ready to perform)
+
+📊 Key Metrics:
+  • HRV: 65ms (↑ 8% vs baseline)
+  • RHR: 52bpm (↓ 3% vs baseline)
+  • Sleep Performance: 85%
+
+💡 Coach Insight: "Your recovery is in the green. Your body 
+is ready for a high-intensity workout today."
+
+User: Should I do a hard workout?
+
+Poke: Based on your 72% recovery (green zone), yes! Your HRV 
+is trending up 8% and your RHR is down 3%, indicating your 
+body has recovered well. Your sleep was also strong at 85%. 
+This is a great day for high-intensity training.
+```
 
 ---
 
@@ -266,15 +300,36 @@ Open http://localhost:3000 and connect to `http://localhost:8000/mcp` using "HTT
 2. Verify all environment variables are set
 3. Ensure `requirements.txt` has all dependencies
 
+### Server responds but no data returned
+
+**Solution:**
+1. Verify your WHOOP subscription is active
+2. Check you have recent WHOOP data (wear your strap!)
+3. Try querying data from a specific date: "What was my recovery on 2025-11-01?"
+
+### "No module named 'fastmcp'" Error
+
+**Solution:**
+1. Verify `requirements.txt` has `fastmcp>=2.0.0`
+2. On Render, trigger a manual deploy to reinstall dependencies
+3. Check Render logs for failed dependency installation
+
 ---
 
 ## 📚 Resources
 
+### Documentation
 - [FastMCP Documentation](https://gofastmcp.com)
+- [FastMCP GitHub](https://github.com/jlowin/fastmcp)
 - [MCP Protocol](https://modelcontextprotocol.io)
-- [Poke Documentation](https://poke.com)
+- [Poke Integration Guide](https://poke.com/settings/connections)
 - [WHOOP](https://www.whoop.com)
 - [Render Documentation](https://render.com/docs)
+
+### Related Projects
+- [WHOOP MCP (TypeScript)](https://github.com/JedPattersonn/whoop-mcp) - Original TypeScript implementation
+- [Poke MCP Template](https://github.com/InteractionCo/mcp-server-template) - Official Poke template
+- [MCP Inspector](https://github.com/modelcontextprotocol/inspector) - Tool for testing MCP servers
 
 ---
 
@@ -301,11 +356,23 @@ MIT License - feel free to use this for your own projects!
 ## 💬 Support
 
 If you have questions or issues:
-1. Check the [Troubleshooting](#troubleshooting) section
-2. Open an issue on GitHub
-3. Join the Poke community
+1. Check the [Troubleshooting](#-troubleshooting) section above
+2. [Open an issue](https://github.com/kabirrgrover/whoop-mcp-poke/issues) on GitHub
+3. Review [FastMCP documentation](https://gofastmcp.com)
+4. Check [Poke's integration guide](https://poke.com/settings/connections)
+
+---
+
+## 🚀 Quick Links
+
+- **Live Example:** https://mcp-server-ct3l.onrender.com/mcp (demo server)
+- **Use This Template:** Click "Use this template" button above
+- **Report Issues:** [GitHub Issues](https://github.com/kabirrgrover/whoop-mcp-poke/issues)
+- **Star on GitHub:** Show your support! ⭐
 
 ---
 
 **Made with ❤️ for the WHOOP and Poke communities**
+
+*This is an open-source project. Contributions, issues, and feature requests are welcome!*
 
