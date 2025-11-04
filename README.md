@@ -24,6 +24,10 @@ This MCP server lets you query your WHOOP fitness data through Poke AI assistant
 - 🌐 **Cloud Ready**: Deploy to Render with one click
 - 🤖 **Poke Compatible**: Works out of the box with Poke AI
 
+### 🔑 What Makes This Different
+
+This is a **reverse-engineered** implementation that directly interfaces with WHOOP's private API. No official SDK, no OAuth flows, no waiting for API approval. Perfect for developers who don't want to go through the hassle of WHOOP's official development program but still want programmatic access to their comprehensive fitness data.
+
 ---
 
 ## 🚀 Quick Start
