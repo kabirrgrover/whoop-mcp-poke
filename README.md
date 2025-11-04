@@ -327,7 +327,6 @@ Open http://localhost:3000 and connect to `http://localhost:8000/mcp` using "HTT
 - [Render Documentation](https://render.com/docs)
 
 ### Related Projects
-- [WHOOP MCP (TypeScript)](https://github.com/JedPattersonn/whoop-mcp) - Original TypeScript implementation
 - [Poke MCP Template](https://github.com/InteractionCo/mcp-server-template) - Official Poke template
 - [MCP Inspector](https://github.com/modelcontextprotocol/inspector) - Tool for testing MCP servers
 
@@ -348,7 +347,6 @@ MIT License - feel free to use this for your own projects!
 ## ⭐ Acknowledgments
 
 - Built with [FastMCP 2.0](https://github.com/jlowin/fastmcp)
-- Inspired by [WHOOP MCP TypeScript implementation](https://github.com/JedPattersonn/whoop-mcp)
 - Designed for [Poke AI Assistant](https://poke.com)
 
 ---
@@ -365,7 +363,6 @@ If you have questions or issues:
 
 ## 🚀 Quick Links
 
-- **Live Example:** https://mcp-server-ct3l.onrender.com/mcp (demo server)
 - **Use This Template:** Click "Use this template" button above
 - **Report Issues:** [GitHub Issues](https://github.com/kabirrgrover/whoop-mcp-poke/issues)
 - **Star on GitHub:** Show your support! ⭐
