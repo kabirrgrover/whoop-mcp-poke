@@ -153,87 +153,100 @@ async def handle_healthspan(whoop_client: WhoopClient, date: Optional[str] = Non
 
 def format_overview_response(data: Dict[str, Any]) -> str:
     """Format overview data for display."""
+    import json
     lines = [
         "📊 WHOOP OVERVIEW",
         "═══════════════════",
         ""
     ]
     
-    # Extract relevant data - adjust based on actual API response structure
-    if isinstance(data, list) and len(data) > 0:
-        data = data[0]
-    
-    # Add cycle info, metrics, activities, etc.
-    lines.append("✅ Overview data retrieved successfully")
-    lines.append(f"Data: {str(data)[:500]}")  # Truncate for display
+    # Display full data in formatted JSON
+    try:
+        formatted_data = json.dumps(data, indent=2, ensure_ascii=False)
+        lines.append(formatted_data)
+    except Exception as e:
+        lines.append(f"✅ Overview data retrieved")
+        lines.append(f"Raw data: {str(data)}")
     
     return "\n".join(lines)
 
 
 def format_sleep_response(data: Dict[str, Any]) -> str:
     """Format sleep data for display."""
+    import json
     lines = [
         "😴 SLEEP ANALYSIS",
         "═══════════════════",
         ""
     ]
     
-    if isinstance(data, list) and len(data) > 0:
-        data = data[0]
-    
-    lines.append("✅ Sleep data retrieved successfully")
-    lines.append(f"Data: {str(data)[:500]}")
+    # Display full data in formatted JSON
+    try:
+        formatted_data = json.dumps(data, indent=2, ensure_ascii=False)
+        lines.append(formatted_data)
+    except Exception as e:
+        lines.append(f"✅ Sleep data retrieved")
+        lines.append(f"Raw data: {str(data)}")
     
     return "\n".join(lines)
 
 
 def format_recovery_response(data: Dict[str, Any]) -> str:
     """Format recovery data for display."""
+    import json
     lines = [
         "💚 RECOVERY ANALYSIS",
         "═══════════════════",
         ""
     ]
     
-    if isinstance(data, list) and len(data) > 0:
-        data = data[0]
-    
-    lines.append("✅ Recovery data retrieved successfully")
-    lines.append(f"Data: {str(data)[:500]}")
+    # Display full data in formatted JSON
+    try:
+        formatted_data = json.dumps(data, indent=2, ensure_ascii=False)
+        lines.append(formatted_data)
+    except Exception as e:
+        lines.append(f"✅ Recovery data retrieved")
+        lines.append(f"Raw data: {str(data)}")
     
     return "\n".join(lines)
 
 
 def format_strain_response(data: Dict[str, Any]) -> str:
     """Format strain data for display."""
+    import json
     lines = [
         "🔥 STRAIN ANALYSIS",
         "═══════════════════",
         ""
     ]
     
-    if isinstance(data, list) and len(data) > 0:
-        data = data[0]
-    
-    lines.append("✅ Strain data retrieved successfully")
-    lines.append(f"Data: {str(data)[:500]}")
+    # Display full data in formatted JSON
+    try:
+        formatted_data = json.dumps(data, indent=2, ensure_ascii=False)
+        lines.append(formatted_data)
+    except Exception as e:
+        lines.append(f"✅ Strain data retrieved")
+        lines.append(f"Raw data: {str(data)}")
     
     return "\n".join(lines)
 
 
 def format_healthspan_response(data: Dict[str, Any]) -> str:
     """Format healthspan data for display."""
+    import json
     lines = [
         "⏳ HEALTHSPAN ANALYSIS",
         "═══════════════════",
         ""
     ]
     
-    if isinstance(data, list) and len(data) > 0:
-        data = data[0]
-    
-    lines.append("✅ Healthspan data retrieved successfully")
-    lines.append(f"Data: {str(data)[:500]}")
+    # Display full data in formatted JSON
+    try:
+        formatted_data = json.dumps(data, indent=2, ensure_ascii=False)
+        lines.append(formatted_data)
+    except Exception as e:
+        lines.append(f"✅ Healthspan data retrieved")
+        lines.append(f"Raw data: {str(data)}")
     
     return "\n".join(lines)
 
