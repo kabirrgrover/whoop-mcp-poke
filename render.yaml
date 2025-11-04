@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: whoop-mcp-server
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python src/server.py
+    envVars:
+      - key: PORT
+        generateValue: true
+      - key: HOST
+        value: 0.0.0.0
+      - key: WHOOP_EMAIL
+        sync: false
+      - key: WHOOP_PASSWORD
+        sync: false
+
